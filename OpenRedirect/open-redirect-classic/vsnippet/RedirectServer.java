@@ -10,7 +10,7 @@ public class RedirectServer {
     public static void main(String[] args) throws IOException {
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/redirect", new RedirectHandler());
-        server.setExecutor(null); // 기본 executor 사용
+        server.setExecutor(null);
         server.start();
         System.out.println("Server started on port 8080.");
     }

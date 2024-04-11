@@ -1,5 +1,7 @@
 FROM openjdk:11
 
+RUN apt update -y; apt install -y supervisor
+
 RUN mkdir -p /app
 
 WORKDIR /app
